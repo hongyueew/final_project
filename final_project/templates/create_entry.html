@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>create new entry</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body class="create-entry-page">
+        <h1 class="page_title">create new journal entry</h1>
+
+        <form method="POST" action="{{ url_for('create_entry') }}">
+            <div id="title_input">
+                <!-- <label for="title">title:</label> -->
+                <input type="text" id="title" name="title" placeholder="entry title..." required>
+            </div>
+            <div id="text_input">
+                <!-- <label for="entry">journal text:</label> -->
+                <textarea id="entry" name="entry" rows="15" placeholder="what's on your mind today?" required></textarea>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="{{ url_for('journal') }}" style="font-size: 30px; color: black;">← back to journal</a>
+                <button type="submit" class="small_button">save entry</button>
+            </div>
+        </form>
+        
+        
+    </body>
+</html>

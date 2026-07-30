@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ entry.title }}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
+    <body class="view-entry-page">
+        <article>
+            <h1 class="page_title"><span class="dark_highlight">{{ entry.title }}</span></h1>
+            <h5><span class="dark_highlight">written: {{ entry.datestamp }}</span></h5>
+            <p style="margin-top: 0px;">_______________________________</p>
+            <p style="white-space: pre-wrap; word-break: break-word; margin-right: 20px; font-size: 20px;">{{ entry.entry }}</p>
+            <footer>
+                <a href="{{ url_for('journal') }}" role="button" class="secondary" style="color: black;">← back to all entries</a>
+                <!-- <button id="delete">Delete Entry</button> -->
+            </footer>
+        </article>
+    </body>
+</html>
+
+<!-- <script>
+            let delete_button = document.getElementById("delete");
+
+            delete_button.addEventListener("click", function(){
+                
+            });
+        </script> -->

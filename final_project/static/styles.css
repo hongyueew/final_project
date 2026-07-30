@@ -1,0 +1,195 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h5 {
+    font-size: 20px;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#title_title {
+    font-size: 120px;
+    margin-bottom: 0px;
+    margin-top: 150px;
+}
+
+#subtitle {
+    font-size: 80px;
+    margin-top: 10px;
+}
+
+.page_title {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.page_subtitle {
+    font-size: 50px;
+}
+
+body {
+    background-color: #FEFBEA;
+    margin-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark_highlight {
+    background-color:#F3BABA
+}
+
+.light_highlight {
+    background-color:#FFEFF1
+}
+
+/* .home-page {
+    margin-left: 20px;
+} */
+
+.button {
+    background-color: #F3BABA;
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+    font-size: 50px;
+    border-radius: 20px;
+    margin: 20px 40px 20px 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.small_button {
+    background-color: #F3BABA;
+    width: 200px;
+    height: 70px;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 20px;
+    margin: 20px 40px 20px 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.input input {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#create_entry {
+    background-color: #F3BABA;
+    width: 300px;
+    height: 70px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 20px;
+    margin: 20px 40px 20px 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* .journal-page h2 {
+    font-size: 50px;
+} */
+
+.journal-page h3 {
+    font-size: 30px;
+}
+
+.journal-page p {
+    font-size: 20px;
+}
+
+#title_input input {
+    font-size: 20px;
+    width: 100%;
+    max-width: 1350px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#text_input textarea {
+    font-size: 20px;
+    min-width: 1350px;
+    height: 450px;
+    padding: 20px;
+    resize: vertical;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* .create-entry-page a {
+    font-size: 20px;
+    color: black;
+} */
+
+/* #entry_buttons {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.existing_entries article {
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+/* .existing_entries article a {
+    color: black;
+    font-weight: normal;
+} */
+
+/* .existing_entries article h5 {
+    font-size: 20px;
+    padding-top: 0px;
+} */
+
+
+
+
+
+/* .existing_entries h5 {
+} */
+/* .home-page {
+    background-color: #F3BABA;
+} */
+/* #title {
+
+} */
+
+/* .heading {
+    font-family: ;
+    font-size: ;
+    color: ;
+    align-items: center;
+    background-color: ; ??
+    margin: ;
+    
+}
+
+.text {
+    format
+}
+
+.buttons1 {
+    format
+}
+
+//incase to many buttons on page or something
+.buttons2 {
+    fomrat
+}
+
+// incase we want to change background color:
+body {
+  background-color: powderblue;
+} */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>journal</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body class="journal-page">
+        <h1 class="page_title" style="margin-bottom:0px;">welcome {{username}} :)</h1>
+        <h2 class="page_subtitle" style="margin-top:5px;">what's on your mind today?</h2>
+        <button id="create_entry" data-url="{{url_for('create_entry')}}" style="margin-top:0px; margin-bottom:15px;">create new entry</button>
+        <p>__________________________________________________</p>
+        <h2 class="page_subtitle">recent entries:</h2>
+
+        {% if entries %}
+            <div class="existing_entries">
+                {% for entry in entries %}
+                    <article>
+                        <h5><span class="dark_highlight">{{ entry.title }}</span></h5>
+                        <h6 style="margin-top:5px; font-size:20px; margin-bottom:0px;"><span class="dark_highlight">{{ entry.datestamp }}</span></h6>
+                        <p>{{ entry.entry[:100] }}{% if entry.entry|length > 100 %}...{% endif %}</p>
+                        <footer>
+                            <a href="{{ url_for('view_entry', entry_id=entry.id) }}" role="button" style="color: black; font-weight: normal">read full entry</a>
+                        </footer>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>no journal entries yet. click above to create your first one.</p>
+        {% endif %}
+            
+        <script>
+            let create_entry_button = document.getElementById("create_entry");
+            create_entry_button.addEventListener("click", function(){
+                window.location.href = this.dataset.url;
+            });
+        </script>
+    </body>
+</html>

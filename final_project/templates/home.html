@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body class="home-page">
+        <h1 id="title_title">memory.book</h1>
+        <h2 id="subtitle">what's on your mind?</h2>
+        <button id="signup" class="button" data-url="{{url_for('signup')}}">sign up</button>
+        <button id="login" class="button" data-url="{{url_for('login')}}">login</button>
+        <script>
+            let signup_button = document.getElementById("signup");
+            let login_button = document.getElementById("login");
+
+            signup_button.addEventListener("click", function(){
+                window.location.href = this.dataset.url;
+            });
+
+            login_button.addEventListener("click", function(){
+                window.location.href = this.dataset.url;
+            });
+        </script>
+    </body>
+</html>
