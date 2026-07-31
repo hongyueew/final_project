@@ -55,7 +55,6 @@ def login():
             flash('Invalid username or password')
             return redirect(url_for('login'))
 
-
     return render_template('login.html')
 
 @app.route('/journal')
