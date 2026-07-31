@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    </head>
+    <body>
+        <main>
+            <h1>Trivia Quiz!</h1>
+            <button id="button">Click here to begin!</button> 
+            <div id="quiz" style="display: none">
+                <fieldset>
+                    <legend>Question 1: How many hearts does an octopus have?</legend>
+                    <label>
+                        <input type="radio" name="q1" value="1">
+                        1
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="2">
+                        2
+                    </label>
+                    <label class="correct">
+                        <input type="radio" name="q1" value="3">
+                        3
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Question 2: Which country won the 2026 world cup?</legend>
+                    <label>
+                        <input type="radio" name="q2" value="1">
+                        France
+                    </label>
+                    <label class="correct">
+                        <input type="radio" name="q2" value="2">
+                        Spain
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="3">
+                        Argentina
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Question 3: Which US state is known for its peaches?</legend>
+                    <label class="correct">
+                        <input type="radio" name="q3" value="1">
+                        Georgia
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="2">
+                        California
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="3">
+                        South Carolina
+                    </label>
+                </fieldset>
+                <button id="submit">Submit</button>
+                <h3 id="score" style="display: none">Score</h3>
+                <button id="reset">Reset</button>
+            </div>
+
+            <script>
+                let start_button = document.getElementById("button");
+                let quiz = document.getElementById("quiz");
+
+                start_button.addEventListener("click", function(){
+                    quiz.style.display = "block";
+                });
+
+                
+
+                let submit_button = document.getElementById("submit");
+                let score_element = document.getElementById("score");
+                let correct_answers = document.getElementsByClassName("correct");
+                submit_button.addEventListener("click", function(){
+                    let score = 0;
+                    let first_answer = document.querySelector('input[name="q1"]:checked');
+                    if (first_answer.value === "3"){
+                        score = score + 1;
+                    };
+
+                    let second_answer = document.querySelector('input[name="q2"]:checked');
+                    if (second_answer.value === "2"){
+                        score = score + 1;
+                    };
+
+                    let third_answer = document.querySelector('input[name="q3"]:checked');
+                    if (third_answer.value === "1"){
+                        score = score + 1;
+                    };
+                    score_element.textContent = `You got ${score} out of 3 correct!`;
+                    score_element.style.display = "block";
+                    correct_answers.style.color = "green";
+                });
+
+                let reset_button = document.getElementById("reset");
+                //reset_button.addEventListener("click", function(){
+
+                //})
+            </script>
+        </main>
+    </body>
+</html>

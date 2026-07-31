@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{species_name}} Penguins</title>
+    </head>
+    <body>
+        <h1>{{species_name}}</h1>
+        {% if species_height | int > 80 %}
+            <p>This penguin is really tall</p>
+        {% else %}
+            <p>This penguin is relatively small</p>
+        {% endif %}
+    </body>
+</html>

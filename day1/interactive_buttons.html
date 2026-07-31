@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Buttons</title>
+    </head>
+    <body style = "background-color: lightblue">
+        <h1 id = "header">Chickens</h1>
+        <button id = "headerbutton">Click for header!</button>
+        <p id = "mainbody">We love chickens! They are the best animals in the world!</p>
+        <button id="disappear_button">Click to disappear the paragraph!</button>
+        <button id="reappear_button">Click to reappear the paragraph!</button>
+        <button id="bkg_button">Change background colour!</button>
+
+        <script>
+            let header = document.getElementById("header");
+            let header_button = document.getElementById("headerbutton");
+            let paragraph = document.getElementById("mainbody");
+            let disappear_button = document.getElementById("disappear_button");
+            let reappear_button = document.getElementById("reappear_button");
+            let bkg_button = document.getElementById("bkg_button");
+           
+
+            header_button.addEventListener("click", function(){
+                header.textContent = "You've chosen Chickens!";
+                header.style.color = "orange";
+            });
+            disappear_button.addEventListener("click", function(){
+                paragraph.style.display = "none";
+            });
+            reappear_button.addEventListener("click", function(){
+                paragraph.style.display = "block";
+            });
+            bkg_button.addEventListener("click", function(){
+                document.body.style.backgroundColor = "pink";
+            })
+        </script>
+    </body>
+</html>

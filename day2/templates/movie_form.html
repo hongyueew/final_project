@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form: Top 3 Favourite Movies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Form: Top 3 Favourite Movies</h1>
+        <h2>Enter your 3 favourite movies</h2>
+        <form method="POST" action="/movie_form">
+            <label for="movie1">1st Favourite Movie:</label>
+            <input type="text" id="movie1" name="movie1" required>
+
+            <label for="movie2">2nd Favourite Movie:</label>
+            <input type="text" id="movie2" name="movie2" required>
+
+            <label for="movie3">3rd Favourite Movie:</label>
+            <input type="text" id="movie3" name="movie3" required>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </main>
+</body>
+</html>

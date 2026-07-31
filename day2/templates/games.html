@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - Video Games Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>{{ title }}</h1>
+
+        <nav>
+            <ul>
+                <li><a href="/">All Games</a></li>
+                <li><a href="/genre/RPG">RPG Games</a></li>
+                <li><a href="/top-rated">Top Rated</a></li>
+            </ul>
+        </nav>
+
+        {% if games|length == 0 %}
+            <p>No games found matching your criteria.</p>
+        {% else %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>Rating</th>
+                        <th>Publisher</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in games %}
+                    <tr>
+                        <td>{{ game.title }}</td>
+                        <td>{{ game.year }}</td>
+                        <td>{{ game.genre }}</td>
+                        <td>{{ game.rating }}</td>
+                        <td>{{game.publisher}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <p>Showing {{ games|length }} games.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Sign Up</h1>
+
+        <form method="POST" action="/submit">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="fav_colour">Favourite colour:</label>
+            <input type="color" id="fav_colour" name="fav_colour" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

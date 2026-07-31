@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Components</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    </head>
+    <body>
+        <main>
+            <h1>Quiz about Favourite Music</h1>
+            <button id="button">Click here to begin!</button> 
+            <div id="quiz" style="display: none">
+                <div>
+                    <h2 class="result">Who is your favourite artist/band?</h2>
+                    <input type="text" id="artist-input" placeholder="Type your answer here">
+                </div>
+                <div>
+                    <h2 class="result">What's your favourite music genre?</h2>
+                    <input type="text" id="genre-input" placeholder="Type your answer here">
+                </div>
+                <button id="submit">Submit</button>
+            </div>
+
+            <script>
+                let button = document.getElementById("button");
+                let result = document.getElementById("quiz");
+
+                button.addEventListener("click", function(){
+                    result.style.display = "block";
+                });
+
+                let submit_button = document.getElementById("submit");
+                submit_button.addEventListener("click", function(){
+                    let first_answer = document.getElementById("artist-input").value;
+                    let second_answer = document.getElementById("genre-input").value;
+                    if (first_answer === "" || second_answer === "") {
+                        alert("Please answer any empty questions");
+                    } else {
+                        alert("Yay the form has been successfully submitted!")
+                    }
+                })
+            </script>
+        </main>
+    </body>
+</html>

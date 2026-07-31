@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistics - Video Games Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Database Statistics</h1>
+
+        <p><a href="/">Back to all games</a></p>
+
+        <article>
+            <h2>Overview</h2>
+            <p>Total games in database: <strong>{{ total_games }}</strong></p>
+            <p>Average rating: <strong>{{ "%.2f"|format(average_rating) }}</strong></p>
+        </article>
+
+        <article>
+            <h2>Highest Rated Game</h2>
+            <p><strong>{{ highest_rated.title }}</strong> ({{ highest_rated.year }})</p>
+            <p>Rating: {{ highest_rated.rating }}/10</p>
+        </article>
+
+        <article>
+            <h2>Games by Genre</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Genre</th>
+                        <th>Number of Games</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in genre_counts %}
+                    <tr>
+                        <td>{{ item.genre }}</td>
+                        <td>{{ item.count }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </article>
+    </main>
+</body>
+</html>
